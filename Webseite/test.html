@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal - Innovative Dienstplanung</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #0070FF;
+            --secondary-color: #00C8FF;
+            --accent-color: #FFB800;
+            --text-color: #FFFFFF;
+            --bg-color: #0A0F18;
+            --card-bg: #151C28;
+            --border-color: #2A3544;
+            --hover-color: #1A2332;
+            --gradient: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            --border-radius: 12px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: radial-gradient(circle at 50% 50%, #1A2332 0%, var(--bg-color) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: url('data:image/svg+xml,<svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none" stroke="%23ffffff10" stroke-width="0.25"/></svg>');
+            opacity: 0.1;
+            animation: gridMove 15s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-50%) rotate(5deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .product-name {
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin: 0 auto 40px;
+            color: #B0B8C1;
+        }
+
+        /* Pricing Cards */
+        .pricing-section {
+            padding: 100px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .pricing-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 40px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        .pricing-card.featured {
+            border: 2px solid var(--primary-color);
+            position: relative;
+        }
+
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .price {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 25px 0;
+        }
+
+        .price span {
+            font-size: 1rem;
+            opacity: 0.7;
+        }
+
+        .features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .features li {
+            margin: 15px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--accent-color);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: var(--gradient);
+            color: white;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.2s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 992px) {
+            .pricing-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 { font-size: 2.5rem; }
+            .pricing-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="product-name">PERSONAL</div>
+            <h2>Die Zukunft der Dienstplanung</h2>
+            <p>Optimieren Sie Ihre Personalplanung mit unserer innovativen Software-Lösung. Flexibel, effizient und benutzerfreundlich.</p>
+            <a href="#pricing" class="cta-button">Jetzt entdecken</a>
+        </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Standard Edition</h3>
+                    <div class="price">29€ <span>/Monat</span></div>
+                    <ul class="features">
+                        <li>Grundlegende Dienstplanung</li>
+                        <li>Einfache Zeiterfassung</li>
+                        <li>E-Mail Support</li>
+                        <li>Regelmäßige Updates</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Auswählen</a>
+                </div>
+
+                <div class="pricing-card featured">
+                    <h3>Pro Edition</h3>
+                    <div class="price">59€ <span>/Monat</span></div>
+                    <ul class="features">
+                        <li>Alle Standard-Features</li>
+                        <li>Erweiterte Planungstools</li>
+                        <li>Priorisierter Support</li>
+                        <li>Automatische Berichte</li>
+                        <li>API-Zugang</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Auswählen</a>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Enterprise Edition</h3>
+                    <div class="price">129€ <span>/Monat</span></div>
+                    <ul class="features">
+                        <li>Alle Pro-Features</li>
+                        <li>Unbegrenzte Benutzer</li>
+                        <li>24/7 Premium Support</li>
+                        <li>Individuelle Anpassungen</li>
+                        <li>Dedizierter Account Manager</li>
+                    </ul>
+                    <a href="#contact" class="cta-button">Kontaktieren</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

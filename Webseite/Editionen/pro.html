@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="de" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal – Pro Edition</title>
+    <link rel="stylesheet" href="../index.css">
+</head>
+<body>
+    <header id="mainHeader">
+        <div class="container">
+            <a href="../index.html" class="logo">Personal</a>
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="../index.html#features">Funktionen</a></li>
+                    <li class="dropdown">
+                        <a href="#editions" class="dropdown-toggle active">Editionen</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="standard.html">Standard Edition</a></li>
+                            <li><a href="pro.html" class="active">Pro Edition</a></li>
+                            <li><a href="enterprise.html">Enterprise Edition</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../index.html#why-us">Ihr Vorteil</a></li>
+                    <li><a href="../index.html#ui-ux">UI/UX</a></li>
+                    <li><a href="../index.html#testimonials">Kundenstimmen</a></li>
+                    <li><a href="../index.html#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="container edition-detail-section">
+        <div class="section-title">
+            <h1>Pro Edition</h1>
+            <p>Volle Kontrolle und Flexibilität für selbstständige Pflegefachkräfte und Freelancer.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="icon">K_V</div>
+                <h3>Klienten- & Objektmanagement</h3>
+                <p>Verwalten Sie Ihre Klienten und Einsatzorte eigenständig und professionell.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📅</div>
+                <h3>Flexible Selbstplanung</h3>
+                <p>Planen Sie Ihre Verfügbarkeiten, Dienste und Einsätze flexibel über den intuitiven Kalender.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📋</div>
+                <h3>Leistungsnachweise (PDF)</h3>
+                <p>Erstellen und exportieren Sie professionelle Leistungsnachweise für Ihre Abrechnung.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💡</div>
+                <h3>Dashboard für Freelancer</h3>
+                <p>Behalten Sie Ihre Auslastung, Finanzen (sofern erfasst) und anstehende Einsätze im Blick.</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">🔗</div>
+                <h3>Kommunikation & Organisation</h3>
+                <p>Alle Werkzeuge für eine effiziente Selbstorganisation und Kommunikation mit Ihren Auftraggebern.</p>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="../index.html#contact" class="cta-button">Interesse an Pro? Kontaktieren Sie uns!</a>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="currentYear"></span> Personal. Alle Rechte vorbehalten.</p>
+            <p><a href="../index.html#privacy">Datenschutz</a> | <a href="../index.html#impressum">Impressum</a></p>
+            <p id="app-version">Aktuelle Software-Version des Produkts: 1.0.0a</p>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
